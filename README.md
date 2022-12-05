@@ -18,9 +18,15 @@ Das Anschließen von VCC ist nur Sinvoll sofern der TTL Konverter auf 3.3 V eing
 Die dazu benötigten Biblioteken sind die folgenden:
 
 [https://github.com/mcci-catena/arduino-lorawan](https://www.arduinolibraries.info/libraries/mcci-lo-ra-wan-lmic-library)
+
 [https://github.com/rocketscream/Low-Power](https://www.arduinolibraries.info/libraries/low-power)
+
 [https://www.arduinolibraries.info/libraries/one-wire](https://www.arduinolibraries.info/libraries/one-wire)
+
 https://www.arduinolibraries.info/libraries/dallas-temperature
+
+
+
 
 
 
