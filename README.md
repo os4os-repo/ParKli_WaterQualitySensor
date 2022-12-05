@@ -6,10 +6,10 @@
 
 Da für die Programmierung ein USB zu TTL Konverter benötigt wird, muss dieser zuvor verkabelt werden.
 Arduino ProMini	USB zu TTL Konverter
- GND	GND
- RxD	TxD
- TxD	RxD
- VCC	nc
+ GND-GND
+ RxD-TxD
+ TxD-RxD
+ VCC-nc
  
 Das Anschließen von VCC ist nur Sinvoll sofern der TTL Konverter auf 3.3 V eingestellt ist und sich der Arduino nicht auf der Platine befindet bzw Schalter (B1 - BTN on/off) auf OFF steht. Zum Programmieren des Arduinos ist eine Stromversorgung durch den Akku sinnvoll und VCC des TTLs bleibt nicht verbunden.
 
