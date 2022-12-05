@@ -1,5 +1,7 @@
 
 ![](Images/PCB_WaterQualitySensor.png)
+![](Arduino/Animation2.gif)
+
 # Wasser Qualitäts Sensor - Doku/Kochbuch
 
 # Arduino ProMini – Anschließen & Programmieren
