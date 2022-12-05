@@ -15,7 +15,7 @@ Arduino ProMini	USB zu TTL Konverter
  
 Das Anschließen von VCC ist nur Sinvoll sofern der TTL Konverter auf 3.3 V eingestellt ist und sich der Arduino nicht auf der Platine befindet bzw Schalter (B1 - BTN on/off) auf OFF steht. Zum Programmieren des Arduinos ist eine Stromversorgung durch den Akku sinnvoll und VCC des TTLs bleibt nicht verbunden.
 
-# Die Programmierung des Sensors wird mithilfe der Arduino IDE durchgeführt.
+# Programmierung mithilfe der Arduino IDE.
 
 Die dazu benötigten Biblioteken sind die folgenden:
 
