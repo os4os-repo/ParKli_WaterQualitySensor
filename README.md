@@ -22,6 +22,11 @@ Das Anschließen von VCC ist nur sinnvoll sofern der TTL-Konverter auf 3.3 V ein
 Die dazu benötigten Bibliotheken sind die folgenden:
 
 [https://github.com/mcci-catena/arduino-lorawan](https://www.arduinolibraries.info/libraries/mcci-lo-ra-wan-lmic-library)
+Es sollte nicht vergessen werden die config Datei anzupassen 
+Das Standard Verzeichnis lautet: C:\Users\Administrator\Documents\Arduino\libraries\MCCI_LoRaWAN_LMIC_library\project_config
+Für Europa und das verwendete Lora module müssen folgende Einträge einkommentiert werden:
+#define CFG_eu868 1
+#define CFG_sx1276_radio 1
 
 [https://github.com/rocketscream/Low-Power](https://www.arduinolibraries.info/libraries/low-power)
 
