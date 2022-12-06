@@ -32,7 +32,7 @@ https://www.arduinolibraries.info/libraries/dallas-temperature
 
 # WaterQualitySensor Schematik und verwendete Komponenten 
  
-<img src="https://github.com/os4os-repo/WaterQualitySensor/blob/main/PcbResources/Schematic_WasserQualliSensor%20V1.1_2022-12-06.svg" width="200">
+<img src="https://github.com/os4os-repo/WaterQualitySensor/blob/main/PcbResources/Schematic_WasserQualliSensor%20V1.1_2022-12-06.svg" width="1000">
 
 1.) Das TP4056-Module ermöglicht das Laden der verbauten Li-Ion-Akkus entweder per USB und einem Standard-Netzteil oder Powerbank oder über ein 6V Solar-Pannel, welches an X1 angeschlossen wird. Das Laden der Akkus ist in On-und Off-Position des Switches B1 möglich. 
 2.) Die Platine ist auf die Verwendung zweier 18650 Li-Ion-Akkus ausgelegt. Ein Betrieb mit anderen Akkus im Spannungsbereich von 3-4.2V ist ebenfalls möglich. Zudem können zusätzliche Akkus über den Konnektor X1 angeschlossen werden, um eine längere Laufzeit zu ermöglichen. Dabei ist zwingend auf korrekte Polarität beim Anschluss zu achten!
