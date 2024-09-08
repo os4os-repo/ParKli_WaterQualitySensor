@@ -3,6 +3,12 @@
 ![](Arduino/Animation2.gif)
 
 # Water Quality Sensor - Documentary/Cookbook
+The development of the sensor was funded as part of the ParKli research project.
+The ParKli research project is funded by the Baden-Württemberg Foundation in the programme “Innovations for Adaptation to Climate Change”.
+
+## Further information
+https://datahub.openscience.eu/dataset/parkli-boje
+https://parkli.de/
 
 # Arduino ProMini - Connecting & programming
 
@@ -62,6 +68,9 @@ https://www.arduinolibraries.info/libraries/dallas-temperature
 - The RFM95W LoRa Radio Transceiver Module is used as a transmitter module. 
 - The component group C1, R2 and R3 enable the Arduino to measure the voltage and thus the remaining capacity of the batteries. As all batteries are connected in parallel, their voltage is identical. The remaining capacity can be calculated based on the voltage curve of the installed batteries.
 
+# Further links
+
+https://datahub.openscience.eu/dataset/parkli-boje
 
 
 
