@@ -7,7 +7,7 @@ The development of the sensor was funded as part of the ParKli research project.
 The ParKli research project is funded by the Baden-Württemberg Foundation in the programme “Innovations for Adaptation to Climate Change”.
 
 ## Further information
-https://datahub.openscience.eu/dataset/parkli-boje
+https://datahub.openscience.eu/dataset/parkli-boje <br>
 https://parkli.de/
 
 # Arduino ProMini - Connecting & programming
