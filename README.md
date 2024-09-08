@@ -37,10 +37,8 @@ The following entries must be commented in for Europe and the Lora module used:
 
 #define CFG_sx1276_radio 1
 
-[https://github.com/rocketscream/Low-Power](https://www.arduinolibraries.info/libraries/low-power)
-
-[https://www.arduinolibraries.info/libraries/one-wire](https://www.arduinolibraries.info/libraries/one-wire)
-
+[https://github.com/rocketscream/Low-Power](https://www.arduinolibraries.info/libraries/low-power) <br>
+[https://www.arduinolibraries.info/libraries/one-wire](https://www.arduinolibraries.info/libraries/one-wire) <br>
 https://www.arduinolibraries.info/libraries/dallas-temperature
 
 
