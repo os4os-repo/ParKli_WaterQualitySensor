@@ -2,30 +2,30 @@
 ![](Images/PCB_WaterQualitySensor.png)
 ![](Arduino/Animation2.gif)
 
-# Wasser Qualitäts Sensor - Doku/Kochbuch
+# Water Quality Sensor - Documentary/Cookbook
 
-# Arduino ProMini – Anschließen & Programmieren
+# Arduino ProMini - Connecting & programming
 
-Da für die Programmierung ein USB zu TTL Konverter benötigt wird, muss dieser zuvor verkabelt werden.
-Arduino ProMini	USB zu TTL Konverter
+As a USB to TTL converter is required for programming, this must be wired beforehand.
+Arduino ProMini USB to TTL converter.
  GND-GND
  RxD-TxD
  TxD-RxD
  VCC-nc
  
-Das Anschließen von VCC ist nur sinnvoll sofern der TTL-Konverter auf 3.3 V eingestellt ist und sich der Arduino nicht auf der Platine befindet bzw Schalter (B1 - BTN on/off) auf OFF steht. Zum Programmieren des Arduinos ist eine Stromversorgung durch den Akku sinnvoll und VCC des TTLs bleibt nicht verbunden.
+Connecting VCC only makes sense if the TTL converter is set to 3.3 V and the Arduino is not on the board or the switch (B1 - BTN on/off) is set to OFF. To program the Arduino, a power supply from the battery makes sense and VCC of the TTL remains unconnected.
 
-(Eine Programmierung über den USB-Anschluss des tp4056-Modules ist nicht möglich)
+(Programming via the USB port of the tp4056 module is not possible)
 
-# Programmierung mithilfe der Arduino IDE.
+# Programming using the Arduino IDE
 
-Die dazu benötigten Bibliotheken sind die folgenden:
+The libraries required for this are as follows:
 
 [https://github.com/mcci-catena/arduino-lorawan](https://www.arduinolibraries.info/libraries/mcci-lo-ra-wan-lmic-library)
 
-Es sollte nicht vergessen werden die config Datei anzupassen 
-Das Standard Verzeichnis lautet: C:\Users\Administrator\Documents\Arduino\libraries\MCCI_LoRaWAN_LMIC_library\project_config
-Für Europa und das verwendete Lora module müssen folgende Einträge einkommentiert werden:
+You should not forget to adjust the config file 
+The default directory is: C:\Users\Administrator\Documents\Arduino\libraries\MCCI_LoRaWAN_LMIC_library\project_config
+The following entries must be commented in for Europe and the Lora module used:
 
 #define CFG_eu868 1
 
@@ -38,29 +38,29 @@ Für Europa und das verwendete Lora module müssen folgende Einträge einkomment
 https://www.arduinolibraries.info/libraries/dallas-temperature
 
 
-# WaterQualitySensor Schematik und verwendete Komponenten 
+# Schematics and components used 
  
 <img src="https://github.com/os4os-repo/WaterQualitySensor/blob/main/PcbResources/Schematic_WasserQualliSensor%20V1.1_2022-12-06.svg" width="1000">
 
-1.) Das TP4056-Module ermöglicht das Laden der verbauten Li-Ion-Akkus entweder per USB und einem Standard-Netzteil oder Powerbank oder über ein 6V Solar-Pannel, welches an X1 angeschlossen wird. Das Laden der Akkus ist in On-und Off-Position des Switches B1 möglich.
+1.)  The TP4056 module enables the built-in Li-ion batteries to be charged either via USB and a standard power supply unit or power bank or via a 6V solar panel, which is connected to X1. The batteries can be charged in the on and off position of switch B1.
 
-2.) Die Platine ist auf die Verwendung zweier 18650 Li-Ion-Akkus ausgelegt. Ein Betrieb mit anderen Akkus im Spannungsbereich von 3-4.2V ist ebenfalls möglich. Zudem können zusätzliche Akkus über den Konnektor X1 angeschlossen werden, um eine längere Laufzeit zu ermöglichen. Dabei ist zwingend auf korrekte Polarität beim Anschluss zu achten!
+2.) The circuit board is designed for use with two 18650 Li-Ion batteries. Operation with other rechargeable batteries in the voltage range of 3-4.2V is also possible. Additional rechargeable batteries can also be connected via connector X1 to enable a longer runtime. It is essential to ensure correct polarity when connecting!
 
-3.) Switch B1 dient zum Ein-und Ausschalten des Sensors. 
+3.) Switch B1 is used to switch the sensor on and off. 
 
-4.) Das Module MT3608 erhöht die variable Eingangsspannung der Li-Ion-Akkus auf 5V zur Versorgung der Sensoren mit einer konstanten Spannung. Die Spannung muss bei der ersten Benutzung via des Trimm-Pottentiomenters und einem Multimeter auf 5V eingestellt werden. 
+4.) The MT3608 module increases the variable input voltage of the Li-ion batteries to 5V to supply the sensors with a constant voltage. The voltage must be set to 5V for the first use via the trim potentiometer and a multimeter. 
 
-5.) Mithilfe des NPN Mosfets Q1 kann die Stromversorgung der Sensoren und des LoraWan-Modules gesteuert werden. Nur wenn der Pin D4 des Arduinos auf HIGH gesetzt wird, werden die angeschlossenen Module mit Strom versorgt. Dadurch kann der Stromverbrauch optimiert werden. 
-- Im Betrieb befindet sich der Arduino die meiste Zeit im deep-sleep und verbraucht ca. 30-40 μA.  
-- Zum Messen und Senden der Werte sind die Module lediglich eine möglichst kurze Zeit aktiv.
+5.) The NPN mosfet Q1 can be used to control the power supply to the sensors and the LoraWan module. The connected modules are only supplied with power when pin D4 of the Arduino is set to HIGH. This allows the power consumption to be optimized. 
+- During operation, the Arduino is in deep sleep most of the time and consumes approx. 30-40 μA.  
+- To measure and send the values, the modules are only active for as short a time as possible.
 
-6.) Switch B3 ist an einen der WakeUp-Pins des Arduinos angeschlossen. Er bietet die Möglichkeit eine beliebige Funktion des Arduions auszulösen, ohne diesen reseten zu müssen.
+6.) Switch B3 is connected to one of the Arduino's WakeUp pins. It offers the possibility of triggering any function of the Arduino without having to reset it.
 
-7.) U5, U6, U7 und U9 sind als JST XH2.54 3-Pin Stecker konzipiert und verhindern somit ein falsches Anschließen der Sensormodule. Das Pin-Mapping ist dabei systematisch wie folgt: VCC-P1 Value-P2 GND-P3 
-- U5, U7 und U9 ermöglichen dabei das Anschließen eines beliebigen 5v Analog-Sensors.
-- U6 ist in Verbindung mit R5 auf die Verwendung eines oder mehrerer 18b20 Temperatur-Sensors/en ausgelegt.
-- Das RFM95W LoRa Radio Transceiver Module kommt als Sende-Module zum Einsatz. 
-- Die Komponentengruppe C1, R2 und R3 ermöglichen es, dem Arduino die Spannung und somit die verbleibende Kapazität der Akkus zu messen. Da alle Akkus paralell geschalten sind, ist ihre Spannung identisch. Anhand des Spannungsverlaufs der verbauten Akkus lässt sich die Restkapazität berechnen. 
+7.) U5, U6, U7 and U9 are designed as JST XH2.54 3-pin connectors and thus prevent incorrect connection of the sensor modules. The pin mapping is systematic as follows: VCC-P1 Value-P2 GND-P3
+- U5, U7 and U9 allow the connection of any 5v analog sensor.
+- In conjunction with R5, U6 is designed for the use of one or more 18b20 temperature sensors.
+- The RFM95W LoRa Radio Transceiver Module is used as a transmitter module. 
+- The component group C1, R2 and R3 enable the Arduino to measure the voltage and thus the remaining capacity of the batteries. As all batteries are connected in parallel, their voltage is identical. The remaining capacity can be calculated based on the voltage curve of the installed batteries.
 
 
 
